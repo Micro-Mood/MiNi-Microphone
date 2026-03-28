@@ -1,43 +1,45 @@
 # MiNi Microphone Module
 
-基于 **MP34DT05TR-A** 的超小型数字 MEMS 麦克风模块，PDM 输出，适用于 ESP32-S3 等 MCU 的语音采集场景。
+An ultra-compact digital MEMS microphone module based on **MP34DT05TR-A**, with PDM output. Designed for voice capture with MCUs like ESP32-S3.
 
-## 预览
+[**中文文档**](README_CN.md)
 
-| 正面 | 背面 |
-|------|------|
-| ![正面](./docs/img.png) | ![背面](./docs/back.png) |
+## Preview
 
-## 特性
+| Front | Back |
+|-------|------|
+| ![Front](./docs/img.png) | ![Back](./docs/back.png) |
 
-- **芯片**: MP34DT05TR-A (ST)
-- **输出**: PDM (Pulse Density Modulation)
-- **信噪比**: 64 dB
-- **灵敏度**: -26 dBFS
-- **供电**: 1.6V - 3.6V
-- **尺寸**: 超小型 PCB 设计
+## Features
 
-## 文件结构
+- **Chip**: MP34DT05TR-A (ST)
+- **Output**: PDM (Pulse Density Modulation)
+- **SNR**: 64 dB
+- **Sensitivity**: -26 dBFS
+- **Supply Voltage**: 1.6V – 3.6V
+- **Size**: Ultra-compact PCB design
+
+## File Structure
 
 ```
 MiNi-Microphone/
 ├── hardware/
-│   ├── MicroPhone.eprj    # 立创 EDA 工程文件
-│   ├── Gerber.zip          # Gerber 制造文件（可直接发给 PCB 厂）
-│   └── BOM.xlsx            # 物料清单
+│   ├── MicroPhone.eprj    # LCEDA (EasyEDA) project file
+│   ├── Gerber.zip          # Gerber manufacturing files (ready for PCB fab)
+│   └── BOM.xlsx            # Bill of Materials
 ├── docs/
-│   ├── img.png             # PCB 正面
-│   └── back.png            # PCB 背面
+│   ├── img.png             # PCB front
+│   └── back.png            # PCB back
 ├── LICENSE
 └── README.md
 ```
 
-## 使用
+## Usage
 
-1. 直接用 `hardware/Gerber.zip` 下单打板
-2. 按 `hardware/BOM.xlsx` 采购元件并焊接
-3. 连接到 MCU 的 I2S/PDM 接口即可采集音频
+1. Order PCB fabrication using `hardware/Gerber.zip`
+2. Source components per `hardware/BOM.xlsx` and solder
+3. Connect to your MCU's I2S/PDM interface to capture audio
 
-## 许可证
+## License
 
 MIT License
